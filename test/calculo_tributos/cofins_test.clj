@@ -4,5 +4,4 @@
 
 (deftest confins-test
   (testing "Is Appliable "
-    (is (= (isAppliable 1 1 0) true))
-  ))
+    (is (= (isAppliable 1 1 0) true)) ))
