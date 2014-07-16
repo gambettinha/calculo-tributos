@@ -6,7 +6,7 @@
   (println "")
 )
 
-(defn isAppliable
+(defn isApplicable
   "Checks if the tributo should be calculated"
   [indicadorCredito, aliquota, credito]
   (if (= indicadorCredito 1) (> aliquota 0) (> credito 0))
