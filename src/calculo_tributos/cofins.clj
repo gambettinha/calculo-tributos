@@ -14,8 +14,8 @@
 
 (defn typeOfCalculation
   "..."
-  []
-  (println "")
+  [indicadorCredito, aliquota, credito]
+  (if (= indicadorCredito 1) (if (> aliquota 0) -1 0) (if (> credito 0) -1 0))
 )
 
 (defn calculate
