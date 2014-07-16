@@ -11,7 +11,7 @@
   (is (= (typeOfCalculation indicadorCredito aliquota credito) expected)))
 
 
-(deftest confins-is-appliable-test
+(deftest cofins-is-appliable-test
   (testing "Is Applicable - indicadorCredito 1, with aliquota > zero"
   	(let [indicadorCredito 1 aliquota 1 credito 0]
   		(verifyIsApplicable indicadorCredito aliquota credito true)))
@@ -26,20 +26,23 @@
 
   (testing "Is NOT Applicable  - indicadorCredito 0, with credito <= zero"
   	(let [indicadorCredito 0 aliquota 0 credito 0]
-  		(verifyIsApplicable indicadorCredito aliquota credito false)))
+  		(verifyIsApplicable indicadorCredito aliquota credito false))))
 
-
-(deftest confins-type-of-calculation-test
+(deftest cofins-type-of-calculation-test
   (testing "typeOfCalculation - indicadorCredito 1, with aliquota > zero"
   	(let [indicadorCredito 1 aliquota 1 credito 0]
   		(verifyTypeOfCalculation indicadorCredito aliquota credito -1)))
 
   (testing "typeOfCalculation - indicadorCredito 1, with aliquota <= zero"
-  	(let [indicadorCredito 0 aliquota 1 credito 0]
+  	(let [indicadorCredito 1 aliquota 0 credito 0]
   		(verifyTypeOfCalculation indicadorCredito aliquota credito 0)))
 
-)
+  (testing "typeOfCalculation - indicadorCredito 0, with credito > zero"
+  	(let [indicadorCredito 0 aliquota 0 credito 1]
+  		(verifyTypeOfCalculation indicadorCredito aliquota credito -1)))
 
+  (testing "typeOfCalculation - indicadorCredito 0, with credito <= zero"
+  	(let [indicadorCredito 0 aliquota 0 credito 0]
+  		(verifyTypeOfCalculation indicadorCredito aliquota credito 0))))
 
-)
     
