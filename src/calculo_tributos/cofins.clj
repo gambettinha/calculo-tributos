@@ -23,5 +23,10 @@
 (defn calculateVbc
   "Calculates VBC for Cofins"
   [cst, precoUnitarioItem, quantidadeItem, frete, desconto, pRedBC]
-  (if (contains? (1 2 3 4 5 6) cst) 1 0)
+  (if (contains? #{1 2 3 4 5 6} cst) 
+  	(* 
+  		(- (+ (* precoUnitarioItem quantidadeItem) frete) desconto) 
+  		(- 1 (/ pRedBC 100))) 
+  	0)
+
 )

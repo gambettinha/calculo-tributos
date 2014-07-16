@@ -46,16 +46,11 @@
   	(let [indicadorCredito 0 aliquota 0 credito 0]
   		(verifyTypeOfCalculation indicadorCredito aliquota credito 0))))
 
-(comment
 (deftest cofins-calculate-vbc-test
   (testing "calculateVbc - Invalid CST code"
   	(let [cst 9 precoUnitarioItem 0 quantidadeItem 0 frete 0 desconto 0 pRedBC 0]
   		(is (= (calculateVbc cst precoUnitarioItem quantidadeItem frete desconto pRedBC) 0))))
 
   (testing "calculateVbc - Valid CST code"
-  	(let [cst 1 precoUnitarioItem 0 quantidadeItem 0 frete 0 desconto 0 pRedBC 0]
-  		(is (= (calculateVbc cst precoUnitarioItem quantidadeItem frete desconto pRedBC) 1))))
-
-))
-
-    
+  	(let [cst 1 precoUnitarioItem 100 quantidadeItem 1 frete 10 desconto 5 pRedBC 0]
+  		(is (= (calculateVbc cst precoUnitarioItem quantidadeItem frete desconto pRedBC) 105)))))
