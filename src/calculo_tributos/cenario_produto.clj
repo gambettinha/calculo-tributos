@@ -1,5 +1,6 @@
 (ns calculo-tributos.cenario_produto)
 
+(defstruct ProdutoItem :codigoProduto :descricaoComprador :precoUnitario :quantidade :frete :desconto :dataEntrega)
 (defstruct IcmsSt :aliquota :valorPauta :redBC :dispositivoLegal :bcComposicao :cargaMedia :mva :mvaAjustado :valor)
 (defstruct Icms :aliquota :valorPauta :dispositivoLegal :redBC :credito :bcComposicao :valor :creditoDispositivoLegal :indicadorCredito :cst)
 (defstruct Ipi  :aliquota 
