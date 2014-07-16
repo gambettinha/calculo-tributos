@@ -17,3 +17,11 @@
         (calculate
            (struct CenarioProduto "1" "2" defaultIcms defaultIcmst defaultIpi defaultPis defaultCofins (struct Anticipacao 0 2.0 10.0 5.0 "" 20.0 25.0) "SP" "SP")
            defaultProdutoItem))))
+
+(deftest Antecipacao-Valor-isApplicable
+  (testing "is application with tipo anticipacao 12"
+    (is (= false (isApplicable 12))))
+  (testing "is application with tipo anticipacao 12"
+    (is (= true (isApplicable 13))))
+  (testing "is application with tipo anticipacao 12"
+    (is (= true (isApplicable 2)))))
