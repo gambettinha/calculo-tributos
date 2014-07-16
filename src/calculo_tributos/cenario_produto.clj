@@ -1,36 +1,36 @@
-(ns calculo-tributos.cenario_produto)
+(ns calculo-tributos.cenario-produto)
 
 (defstruct ProdutoItem :codigoProduto :descricaoComprador :precoUnitario :quantidade :frete :desconto :dataEntrega)
 (defstruct IcmsSt :aliquota :valorPauta :redBC :dispositivoLegal :bcComposicao :cargaMedia :mva :mvaAjustado :valor)
 (defstruct Icms :aliquota :valorPauta :dispositivoLegal :redBC :credito :bcComposicao :valor :creditoDispositivoLegal :indicadorCredito :cst)
-(defstruct Ipi  :aliquota 
-	            :credito 
-	            :dispositivoLegal 
-	            :cst 
-	            :pRedBC 
-	            :pRedAliq 
-	            :pRedValImp 
-	            :valor 
-	            :creditoDispositivoLegal 
+(defstruct Ipi  :aliquota
+	            :credito
+	            :dispositivoLegal
+	            :cst
+	            :pRedBC
+	            :pRedAliq
+	            :pRedValImp
+	            :valor
+	            :creditoDispositivoLegal
 	            :indicadorCredito)
-(defstruct Pis  :aliquota 
+(defstruct Pis  :aliquota
 				:aliquotaEspecifica
-	            :credito 
-	            :dispositivoLegal 
-	            :cst 
-	            :pRedBC 
-	            :valor 
-	            :creditoDispositivoLegal 
+	            :credito
+	            :dispositivoLegal
+	            :cst
+	            :pRedBC
+	            :valor
+	            :creditoDispositivoLegal
 	            :indicadorCredito)
 
-(defstruct Cofins  	:aliquota 
+(defstruct Cofins  	:aliquota
 				    :aliquotaEspecifica
-	               	:credito 
-	            	:dispositivoLegal 
-	            	:cst 
-	            	:pRedBC 
-	            	:valor 
-	            	:creditoDispositivoLegal 
+	               	:credito
+	            	:dispositivoLegal
+	            	:cst
+	            	:pRedBC
+	            	:valor
+	            	:creditoDispositivoLegal
 	            	:indicadorCredito)
 
 (defstruct Anticipacao :tipo :valorPauta :pRedBCInternaDest :aliqInternaDest :responsavel :mvaAjustado :percFixo :valor)
