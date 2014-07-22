@@ -32,6 +32,10 @@
   	(let [cst 2 precoUnitarioItem 2 quantidadeItem 1 frete 0 desconto 0 pRedBC 0 aliquota 2 aliquotaEspecifica 3]
   		(is (= (calculate cst precoUnitarioItem quantidadeItem frete desconto pRedBC aliquota aliquotaEspecifica) 0.06))))
 
+  (testing "Calculate - cst 2, aliquotaEspecifica 3 returns 0.06 with more itens"
+  	(let [cst 2 precoUnitarioItem 2 quantidadeItem 2 frete 0 desconto 0 pRedBC 0 aliquota 2 aliquotaEspecifica 3]
+  		(is (= (calculate cst precoUnitarioItem quantidadeItem frete desconto pRedBC aliquota aliquotaEspecifica) 0.12))))
+
   (testing "Calculate - cst 99, returns 0.0"
   	(let [cst 99 precoUnitarioItem 2 quantidadeItem 1 frete 0 desconto 0 pRedBC 0 aliquota 2 aliquotaEspecifica 3]
   		(is (= (calculate cst precoUnitarioItem quantidadeItem frete desconto pRedBC aliquota aliquotaEspecifica) 0.0)))))
