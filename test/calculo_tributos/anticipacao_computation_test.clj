@@ -9,7 +9,7 @@
 (def defaultPis (struct Pis 0.0 3.0 1.0 "" 1 5.0))
 (def defaultCofins (struct Cofins 1.0 3.0 1.0 "" 1 5.0))
 (def defaultAntecipacao (struct Anticipacao 1 3.0 5.0 7.0 "" 9.0 11.0))
-(def defaultProdutoItem (struct ProdutoItem "0" "" 100.0" 1 "0" 0" ""))
+(def defaultProdutoItem (struct ProdutoItem "0" "" 100.0 1 0 0 ""))
 
 
 (defn testAnticipacaoTipo [tipo expected]
@@ -20,10 +20,12 @@
            defaultProdutoItem)))))
 
 (deftest Antecipacao-Valor
-  (testAnticipacaoTipo 0 0.0)
-  (testAnticipacaoTipo 1 452.5702235)
-  (testAnticipacaoTipo 5 2519.87875)
-  (testAnticipacaoTipo 8 52917.45375))
+  (testAnticipacaoTipo 0  0.0)
+  (testAnticipacaoTipo 1  452.5702235)
+  (testAnticipacaoTipo 5  2519.87875)
+  (testAnticipacaoTipo 8  52917.45375)
+  (testAnticipacaoTipo 11 452.5702235)
+  (testAnticipacaoTipo 12 50.0))
 
 
 (deftest Antecipacao-Valor-isApplicable
