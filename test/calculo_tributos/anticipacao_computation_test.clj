@@ -22,7 +22,8 @@
 (deftest Antecipacao-Valor
   (testAnticipacaoTipo 0 0.0)
   (testAnticipacaoTipo 1 452.5702235)
-  (testAnticipacaoTipo 5 2519.87875))
+  (testAnticipacaoTipo 5 2519.87875)
+  (testAnticipacaoTipo 8 52917.45375))
 
 
 (deftest Antecipacao-Valor-isApplicable

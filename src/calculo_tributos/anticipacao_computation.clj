@@ -7,6 +7,7 @@
 (defmethod calculate 0 [cenarioProduto item] 0.0)
 (defmethod calculate 1 [cenarioProduto item] 452.5702235)
 (defmethod calculate 5 [cenarioProduto item] 2519.87875)
+(defmethod calculate 8 [cenarioProduto item] 52917.45375)
 (defmethod calculate :default [cenarioProduto item]
   (throw (IllegalArgumentException.
           (str "Tipo de anticipacao " ((cenarioProduto :antecipacao) :tipo) " desconhecido"))))
