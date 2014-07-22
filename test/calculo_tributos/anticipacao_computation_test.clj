@@ -13,10 +13,17 @@
 
 (deftest Antecipacao-Valor
   (testing  "Calculate Antecipacao valor - Default"
-    (is 0.0
+    (is (= 0.0
         (calculate
            (struct CenarioProduto "1" "2" defaultIcms defaultIcmst defaultIpi defaultPis defaultCofins (struct Anticipacao 0 2.0 10.0 5.0 "" 20.0 25.0) "SP" "SP")
            defaultProdutoItem))))
+
+  (testing  "Calculate Antecipacao valor - Tipo antecipacao 1"
+    (is (= 452.5702235
+        (calculate
+           (struct CenarioProduto "1" "2" defaultIcms defaultIcmst defaultIpi defaultPis defaultCofins (struct Anticipacao 1 2.0 10.0 5.0 "" 20.0 25.0) "SP" "SP")
+           defaultProdutoItem))))
+  )
 
 (deftest Antecipacao-Valor-isApplicable
   (testing "is application with tipo anticipacao 12"
